@@ -16,11 +16,12 @@ const questions = [
   {
     question: "Where is The Blue Mosque located?",
     answers: [
-      { text: "Saudi Arabia", correct: false},
-      { text: "Santorini", correct: false},
-      { text: "Turkey", correct: true},
-        { text: "Dubai", correct: false},
+      {text: "Saudi Arabia", correct: false},
+      {text: "Santorini", correct: false},
+      {text: "Turkey", correct: true},
+      {text: "Dubai", correct: false},
     ],
+    
 },
 
 {
@@ -164,5 +165,6 @@ function endQuiz() {
   nextButton.classList.add("hide");
   restartButton.classList.remove("hide");
   resultDiv.classList.remove("hide");
-  resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`;
+  resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`
+  // if (score>5) resultDiv.innerText = 'Wow';
 }
