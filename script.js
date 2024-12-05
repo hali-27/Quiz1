@@ -165,6 +165,28 @@ function endQuiz() {
   nextButton.classList.add("hide");
   restartButton.classList.remove("hide");
   resultDiv.classList.remove("hide");
-  resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`
-  // if (score>5) resultDiv.innerText = 'Wow';
-}
+  resultDiv.innerText = `Not bad..you scored: ${score} / ${shuffledQuestions.length}`
+  if (score>4) {
+    resultDiv.innerText = `Wow! You did great! You scored: ${score} / ${shuffledQuestions.length}`}
+    if (score<=3) {
+      resultDiv.innerText = `Better luck next time. You scored: ${score} / ${shuffledQuestions.length}`}
+      if (score<=1) {
+        resultDiv.innerText = `You need to travel more..you only scored: ${score} / ${shuffledQuestions.length}`
+        }
+  } 
+
+
+
+
+
+// unedited:
+// function endQuiz() {
+//   questionContainer.style.display = "none";
+//   nextButton.classList.add("hide");
+//   restartButton.classList.remove("hide");
+//   resultDiv.classList.remove("hide");
+//   resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`
+//   if (score>5) {
+//     resultDiv.innerText = `Wow! You did great: ${score} / ${shuffledQuestions.length}`;
+//   }
+// }
