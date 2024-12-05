@@ -37,7 +37,14 @@ body {
     gap: 1.25rem;
     margin-bottom: 1rem;
   }
+
+.name {
+  font-size: larger;
+  text-align: center;
+
+}
   
+
   .input-group {
     display: flex;
     align-items: center;
@@ -78,3 +85,4 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
   }  
+

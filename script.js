@@ -1,3 +1,6 @@
+const startPage = document.getElementById("start-page");
+const startButton = document.getElementById("start-btn");
+const intro = document.getElementById("intro")
 const questionContainer = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -6,6 +9,7 @@ const restartButton = document.getElementById("restart-btn");
 const resultDiv = document.getElementById("result");
 
 let shuffledQuestions, currentQuestionIndex, score;
+
 
 const questions = [
   
@@ -50,7 +54,7 @@ const questions = [
 },
 
 {
-    question: "Where is the world's second-largest coral reef?",
+    question: "Where is the World's second-largest coral reef?",
     answers: [
         {text: "Mexico", correct: true},
         {text: "Australia", correct: false},
@@ -70,16 +74,31 @@ const questions = [
 },
 ];
 
-startQuiz();
+
+home();
+
+
+function home() {
+
+  // shuffledQuestions = question;
+  questionContainer.style.display = "none";
+  nextButton.classList.add("hide");
+  restartButton.classList.add("hide");
+  resultDiv.classList.add("hide");
+}
+
+
 
 function startQuiz() {
   score = 0;
   questionContainer.style.display = "flex";
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
+  startButton.classList.add("hide")
   nextButton.classList.remove("hide");
   restartButton.classList.add("hide");
   resultDiv.classList.add("hide");
+  intro.classList.add("hide")
   setNextQuestion();
 }
 
@@ -115,6 +134,9 @@ function resetState() {
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
+
+
+startButton.addEventListener("click", startQuiz);
 
 nextButton.addEventListener("click", () => {
   const answerIndex = Array.from(
