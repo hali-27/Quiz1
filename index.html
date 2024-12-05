@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <title>Travel Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Around the World Quiz</title>
   </head>
   <body>
     <div class="quiz-container">
+      <div id="intro" class="name">
+        <div class="text-2xl font-bold">Around the World Quiz</div>
+        <div id="intro" class="intro">
+          Are you ready to test your geography knowledge?
+        </div>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </div>
       <div id="question-container">
-        <h3 id="question">Question</h3>
+        <h3 id="question"></h3>
         <div id="answer-buttons"></div>
       </div>
       <button id="next-btn" class="btn hide">Next</button>
